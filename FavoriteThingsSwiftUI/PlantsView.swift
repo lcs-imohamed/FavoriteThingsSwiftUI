@@ -19,12 +19,15 @@ struct PlantsView: View {
                 Spacer()
             }
         
+        .navigationTitle("Plants")
         
     }
 }
 
 struct PlantsView_Previews: PreviewProvider {
     static var previews: some View {
+        NavigationView{
         PlantsView()
+        }
     }
 }

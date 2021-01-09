@@ -18,12 +18,15 @@ struct MusicView: View {
             
             Spacer()
         }
+        .navigationTitle("Music")
         
     }
 }
 
 struct MusicView_Previews: PreviewProvider {
     static var previews: some View {
+        NavigationView{
         MusicView()
+        }
     }
 }

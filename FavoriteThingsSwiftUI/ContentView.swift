@@ -9,20 +9,21 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello, world!")
-            .padding()
-        
-        VStack {
-        
-    
-            
+        List {
+             NavigationLink("Coffee", destination: CoffeeView())
+            NavigationLink("Plants", destination: PlantsView())
+            NavigationLink("Music", destination: MusicView())
         }
+        .navigationTitle("Favorite Things")
+        
     }
 }
 
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
+        NavigationView{
         ContentView()
+        }
     }
 }

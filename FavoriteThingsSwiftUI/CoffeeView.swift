@@ -18,12 +18,16 @@ struct CoffeeView: View {
         Text("I love coffee. It tastes great and keeps you from falling asleep when you're up at night trying to finish assignments that you left to the last minute. There is also just something really comforting about the smell of hot coffee on a saturday morning.")
             
             Spacer()
+            
         }
+        .navigationTitle("Coffee")
     }
 }
 
 struct CoffeeView_Previews: PreviewProvider {
     static var previews: some View {
+        NavigationView{
         CoffeeView()
+        }
     }
 }
