@@ -16,6 +16,7 @@ struct Thing: Identifiable {
     let description: String
     
     //A sub list of related favorite things
-    var relatedThings: [Things] = [] //empty list
+    //Example of RECURSION
+    var relatedThings: [Thing] = [] //empty list
     
 }

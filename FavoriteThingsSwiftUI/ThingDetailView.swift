@@ -12,25 +12,32 @@ struct ThingDetailView: View {
     let thingToShow: Thing
     
     var body: some View {
-        VStack{
+        ScrollView{
             Image(thingToShow.title)
                 .resizable()
                 .scaledToFit()
             
             Text(thingToShow.description)
+            
+            // If there are any related things show them
+            if thingToShow.relatedThings.count > 0 {
                 
-                Spacer()
+                List(thingToShow.relatedThings) { thing in
+                    NavigationLink(thing.title, destination: ThingDetailView(thingToShow: thing))
+                    
+                }
             }
-        
+            
+            
+            
+        }
         .navigationTitle(thingToShow.title)
-        
     }
 }
-
 //struct PlantsView_Previews: PreviewProvider {
 //    static var previews: some View {
 //        NavigationView{
 //        PlantsView()
 //        }
-    
+
 
